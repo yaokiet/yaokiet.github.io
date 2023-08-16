@@ -6,22 +6,24 @@
   <title>Basketball Apparel Store</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Helvetica Neue', sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #f2f2f2;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
+      background-color: #000;
+      color: #fff;
     }
     .container {
-      background-color: #fff;
-      border-radius: 10px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      max-width: 500px;
+      max-width: 800px;
+      margin: 0 auto;
       padding: 20px;
+    }
+    .header {
       text-align: center;
+      margin-bottom: 20px;
+    }
+    .description {
+      text-align: center;
+      margin-bottom: 40px;
     }
     .product {
       display: flex;
@@ -30,26 +32,25 @@
     }
     .product-image {
       flex: 1;
-      max-width: 80px;
-      margin-right: 15px;
+      max-width: 100px;
+      margin-right: 20px;
     }
     .product-details {
       flex: 2;
       text-align: left;
     }
     .product-title {
-      font-size: 18px;
+      font-size: 24px;
       margin-bottom: 5px;
       color: #e74c3c;
     }
     .product-price {
-      font-size: 16px;
+      font-size: 20px;
       color: #3498db;
     }
     .product-description {
-      font-size: 14px;
+      font-size: 16px;
       margin-top: 5px;
-      color: #555;
     }
     button {
       background-color: #3498db;
@@ -69,6 +70,9 @@
   <div class="container">
     <div class="header">
       <h1>Basketball Apparel Store</h1>
+    </div>
+    <div class="description">
+      <p>Welcome to our basketball apparel store! Discover a wide range of high-quality basketball jerseys, shoes, and more to elevate your game on the court.</p>
     </div>
 
     <div class="product">
