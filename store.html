@@ -119,6 +119,21 @@
             const totalDisplay = document.querySelector(".total-price");
             totalDisplay.textContent = "Total Price: $" + totalPrice.toFixed(2);
         }
+
+        // Checkout function
+    function checkout() {
+        const totalPrice = calculateTotalPrice();
+        alert(`Total Price: $${totalPrice.toFixed(2)}`);
+    }
+
+    // Function to calculate the total price of items in the cart
+    function calculateTotalPrice() {
+        let totalPrice = 0;
+        cart.forEach(item => {
+            totalPrice += item.price;
+        });
+        return totalPrice;
+    }
     </script>
 </head>
 <body>
@@ -169,6 +184,12 @@
     <div class="total-price">
         Total Price: $0.00
     </div>
+
+    <div class="cart-container">
+    <h2>Your Cart:</h2>
+    <!-- Shopping cart items go here -->
+    <button onclick="checkout()">Checkout</button>
+</div>
     
     <footer>
         <p>&copy; 2023 Kits Shoes. All rights reserved.</p>
