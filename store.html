@@ -86,7 +86,39 @@
     </style>
 
     <script>
-        // Sample product data and shopping cart functions here...
+        // Sample product data
+        const products = [
+            { name: "Classic Sneaker", price: 79.99 },
+            { name: "Running Shoe", price: 89.99 },
+            { name: "Basketball Shoe", price: 109.99 },
+            { name: "High-Top Sneaker", price: 99.99 }
+        ];
+
+        // Initialize shopping cart
+        let cart = [];
+
+        // Function to update the cart and total price
+        function addToCart(productIndex) {
+            cart.push(products[productIndex]);
+            updateCartDisplay();
+        }
+
+        // Function to update the cart display and total price
+        function updateCartDisplay() {
+            const cartContainer = document.querySelector(".cart-container");
+            cartContainer.innerHTML = "";
+
+            let totalPrice = 0;
+            cart.forEach(item => {
+                const cartItem = document.createElement("div");
+                cartItem.textContent = item.name + " - $" + item.price;
+                cartContainer.appendChild(cartItem);
+                totalPrice += item.price;
+            });
+
+            const totalDisplay = document.querySelector(".total-price");
+            totalDisplay.textContent = "Total Price: $" + totalPrice.toFixed(2);
+        }
     </script>
 </head>
 <body>
@@ -102,7 +134,32 @@
     </header>
 
     <main>
-        <!-- Product listing goes here -->
+        <div class="product-list">
+            <div class="product-card">
+                <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRQP6zeaQpdaD2FDzuzfRtuGyvdeUtbLhCyfcn8QR_aO2TShykLMFVQhdJ2fBVIYsTCOsl1lgjRw-Tl2_cZKOZ23TcEre9GucQK6U2eH51rEpP8rOCQPVfzcVWS5WrkfFaZcNYGsBSxnw&usqp=CAc" alt="Product 1">
+                <h2>Classic Sneaker</h2>
+                <p>Price: $79.99</p>
+                <button onclick="addToCart(0)">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSSUI5RGvnMcjXn2Ed1d3OQ5SIfmnLSNupndp-tT8snylhUTp4XOyIZWGHFI4fZds9ZRVxZZrs5uXWmmc_BazAyjUKHbknHXV2jqZLhixPApksZagiMCjIF5dSWoXQ9cbkjFoqR8Q&usqp=CAc" alt="Product 2">
+                <h2>Running Shoe</h2>
+                <p>Price: $89.99</p>
+                <button onclick="addToCart(1)">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTcNetmOzW3b5pJbaBil5UM6QA9QrfOTuI6BRrrALpodxLZJLsDuoB_qNbT9lN3Ur_W9SmE5maFtDAMcBlD_CfXjLAT9NFPMUyxRDmV5kbaAdUDOb4Y7H5zPmZxDKVefw&usqp=CAc" alt="Product 3">
+                <h2>Basketball Shoe</h2>
+                <p>Price: $109.99</p>
+                <button onclick="addToCart(2)">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSFtMDjDXoVzlGESyHZ0iRDyAcpDTwW2MV17FR06pmIN7G_qV4fufl4YCWYL7RfV4zNbow-uOY9FhlmSmxA__exjfQG0I4459wnOuzgtSB98PQdjXEHHK-CQDkHTdNH46og5alLPw&usqp=CAc" alt="Product 4">
+                <h2>High-Top Sneaker</h2>
+                <p>Price: $99.99</p>
+                <button onclick="addToCart(3)">Add to Cart</button>
+            </div>
+        </div>
     </main>
 
     <div class="cart-container">
