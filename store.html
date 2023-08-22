@@ -83,6 +83,22 @@
         .product-card h2 {
             margin: 0.5rem 0;
         }
+
+        .checkout-button {
+        background-color: #ff6600;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 1rem;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .checkout-button:hover {
+        background-color: #ff884d; /* Hover color */
+    }
+        
     </style>
 
     <script>
@@ -177,10 +193,6 @@
         </div>
     </main>
 
-    <div class="cart-container">
-        <h2>Your Cart:</h2>
-        <!-- Shopping cart items go here -->
-    </div>
     <div class="total-price">
         Total Price: $0.00
     </div>
@@ -188,7 +200,7 @@
     <div class="cart-container">
     <h2>Your Cart:</h2>
     <!-- Shopping cart items go here -->
-    <button onclick="checkout()">Checkout</button>
+    <button class="checkout-button" onclick="checkout()">Checkout</button>
 </div>
     
     <footer>
