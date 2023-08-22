@@ -3,68 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kit's ShoeStore</title>
+    <link rel="stylesheet" href="styles.css">
+    <title>Kits Shoes</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
         }
+
         header {
-            background-color: #FE1313;
-            padding: 10px;
+            background-color: #333;
+            color: white;
             text-align: center;
+            padding: 1rem;
         }
-        h1 {
-            margin: 0;
-        }
-        section {
+
+        main {
+            padding: 2rem;
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            padding: 20px;
         }
-        .profile {
-            border: 1px solid #ddd;
-            padding: 10px;
-            margin: 10px;
-            max-width: 300px;
-            text-align: center;
+
+        .product-card {
+            border: 1px solid #ccc;
+            padding: 1rem;
+            margin: 1rem;
+            width: 300px;
         }
-        footer {
-            background-color: #0B33FE;
-            color: #fff;
-            text-align: center;
-            padding: 10px;
-            position: absolute;
-            bottom: 0;
-            width: 100%;
+
+        .product-card img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .product-card h2 {
+            margin: 0.5rem 0;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>JioMeNow - Find Your Match!</h1>
+        <h1>Kits Shoes</h1>
     </header>
-    <section>
-        <div class="profile">
-            <img src="profile1.jpg" alt="Profile 1">
-            <h2>John Doe</h2>
-            <p>Age: 28</p>
-            <p>Hobbies: Traveling, Cooking</p>
-            <button>Connect</button>
+    <main>
+        <div class="product-card">
+            <img src="shoe1.jpg" alt="Product 1">
+            <h2>Classic Sneaker</h2>
+            <p>Price: $79.99</p>
+            <button>Add to Cart</button>
         </div>
-        <div class="profile">
-            <img src="profile2.jpg" alt="Profile 2">
-            <h2>Jane Smith</h2>
-            <p>Age: 25</p>
-            <p>Hobbies: Reading, Hiking</p>
-            <button>Connect</button>
+        <div class="product-card">
+            <img src="shoe2.jpg" alt="Product 2">
+            <h2>Running Shoe</h2>
+            <p>Price: $89.99</p>
+            <button>Add to Cart</button>
         </div>
-        <!-- Add more profiles here -->
-    </section>
-    <footer>
-        <p>&copy; 2023 Kit's Shoe Store. All rights reserved.</p>
-    </footer>
+        <div class="product-card">
+            <img src="shoe3.jpg" alt="Product 3">
+            <h2>Basketball Shoe</h2>
+            <p>Price: $109.99</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product-card">
+            <img src="shoe4.jpg" alt="Product 4">
+            <h2>High-Top Sneaker</h2>
+            <p>Price: $99.99</p>
+            <button>Add to Cart</button>
+        </div>
+    </main>
 </body>
 </html>
+
