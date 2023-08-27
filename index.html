@@ -1,1 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
+        }
+        .video-container {
+            position: relative;
+            overflow: hidden;
+            padding-top: 56.25%; /* 16:9 aspect ratio for responsive video */
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .bio-box {
+            background-color: #f4f4f4;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 600px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Yew Kit</h1>
+        <img src="37681A6F-34B5-49F6-9D19-D5930299813B" alt="Your Photo">
+    </div>
 
+    <div class="video-container">
+        <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/watch?v=U06jlgpMtQs&pp=ygUOcnVzc2lhbiBhbnRoZW0%3D"
+            title="Autoplaying Video"
+            frameborder="0"
+            allowfullscreen
+        ></iframe>
+    </div>
+
+    <div class="bio-box">
+        <h2>About Me</h2>
+        <p>Hello! Im Yew Kit, I love playing games and hanging out with friends, i have aspirations to conquer the world and take over every single living creature on earth ( and maybe even beyond ) Join me on my journey and get to know me! </p>
+    </div>
+</body>
+</html>
